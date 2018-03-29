@@ -2,6 +2,7 @@ package com.ebelli.auctions.app.activity
 
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import com.ebelli.auctions.R
@@ -22,10 +23,12 @@ class MainActivity : AppCompatActivity() {
         activity_main_auctions.layoutManager = linearLayoutManager
         val adapter = AuctionAdapter()
         activity_main_auctions.adapter = adapter
-
         model.loadAuctions().
                 subscribeOn(Schedulers.io()).
                 observeOn(AndroidSchedulers.mainThread()).
+                doOnError {
+                    Snackbar.make(activity_main_auctions,R.string.activity_main_error,Snackbar.LENGTH_LONG)
+                }.
                 subscribe({
             adapter.setData(it)
         })

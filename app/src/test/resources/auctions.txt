@@ -1,0 +1,122 @@
+{
+  "_meta": {},
+  "items": [
+    {
+      "id": 2,
+      "title": "Hayes-Tillman",
+      "rate": 0.04,
+      "amount_cents": 2000000,
+      "term": 12,
+      "risk_band": "A",
+      "close_time": "2018-04-09T05:28:20.543Z"
+    },
+    {
+      "id": 8,
+      "title": "Ritchie-Simonis",
+      "rate": 0.07,
+      "amount_cents": 9000000,
+      "term": 48,
+      "risk_band": "A+",
+      "close_time": "2018-04-21T04:11:14.545Z"
+    },
+    {
+      "id": 18,
+      "title": "Mayer-Skiles",
+      "rate": 0.03,
+      "amount_cents": 7000000,
+      "term": 24,
+      "risk_band": "A+",
+      "close_time": "2018-04-21T19:14:49.544Z"
+    },
+    {
+      "id": 17,
+      "title": "Turner, Herman and Dicki",
+      "rate": 0.04,
+      "amount_cents": 4000000,
+      "term": 12,
+      "risk_band": "A+",
+      "close_time": "2018-04-22T00:35:55.543Z"
+    },
+    {
+      "id": 5,
+      "title": "Rogahn, Bernhard and Purdy",
+      "rate": 0.16,
+      "amount_cents": 4000000,
+      "term": 12,
+      "risk_band": "C-",
+      "close_time": "2018-04-22T07:18:38.545Z"
+    },
+    {
+      "id": 13,
+      "title": "Rempel and Sons",
+      "rate": 0.13,
+      "amount_cents": 10000000,
+      "term": 12,
+      "risk_band": "C-",
+      "close_time": "2018-04-23T02:17:35.540Z"
+    },
+    {
+      "id": 12,
+      "title": "Herzog-Koelpin",
+      "rate": 0.11,
+      "amount_cents": 8000000,
+      "term": 36,
+      "risk_band": "C-",
+      "close_time": "2018-04-23T18:17:33.544Z"
+    },
+    {
+      "id": 10,
+      "title": "Schroeder-Leuschke",
+      "rate": 0.05,
+      "amount_cents": 2000000,
+      "term": 60,
+      "risk_band": "A",
+      "close_time": "2018-04-26T10:13:23.545Z"
+    },
+    {
+      "id": 7,
+      "title": "Mills, Daugherty and Hilll",
+      "rate": 0.13,
+      "amount_cents": 9000000,
+      "term": 24,
+      "risk_band": "C-",
+      "close_time": "2018-04-27T19:56:37.544Z"
+    },
+    {
+      "id": 20,
+      "title": "Reichel-Rutherford",
+      "rate": 0.15,
+      "amount_cents": 8000000,
+      "term": 60,
+      "risk_band": "C",
+      "close_time": "2018-04-30T02:36:22.546Z"
+    },
+    {
+      "id": 14,
+      "title": "Shields-Rolfson",
+      "rate": 0.04,
+      "amount_cents": 9000000,
+      "term": 48,
+      "risk_band": "C",
+      "close_time": "2018-04-30T06:10:00.543Z"
+    },
+    {
+      "id": 9,
+      "title": "Predovic Inc",
+      "rate": 0.1,
+      "amount_cents": 8000000,
+      "term": 48,
+      "risk_band": "C-",
+      "close_time": "2018-05-07T14:31:06.544Z"
+    },
+    {
+      "id": 15,
+      "title": "Conroy, Wyman and Bruen",
+      "rate": 0.07,
+      "amount_cents": 2000000,
+      "term": 12,
+      "risk_band": "A+",
+      "close_time": "2018-05-09T08:11:09.545Z"
+    }
+  ]
+}
