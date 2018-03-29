@@ -2,8 +2,8 @@ package com.ebelli.auctions.app
 
 import java.util.*
 
-class CurrencyExtensions {
-    fun String.addCurrency(){
 
-    }
+fun String.addCurrency(): String {
+    return Currency.getInstance(Locale.getDefault()).symbol + " " + this
+
 }

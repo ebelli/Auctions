@@ -8,7 +8,10 @@ import android.support.v7.widget.LinearLayoutManager
 import com.ebelli.auctions.R
 import com.ebelli.auctions.app.adapter.AuctionAdapter
 import com.ebelli.auctions.app.viewmodel.MainViewModel
+import com.ebelli.auctions.io.data.Items
+import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -26,11 +29,19 @@ class MainActivity : AppCompatActivity() {
         model.loadAuctions().
                 subscribeOn(Schedulers.io()).
                 observeOn(AndroidSchedulers.mainThread()).
-                doOnError {
-                    Snackbar.make(activity_main_auctions,R.string.activity_main_error,Snackbar.LENGTH_LONG)
-                }.
-                subscribe({
-            adapter.setData(it)
+                subscribe(object: Observer<Items> {
+                    override fun onSubscribe(d: Disposable) {
+                    }
+
+                    override fun onNext(t: Items) {
+                        adapter.setData(t)
+                    }
+
+                    override fun onError(e: Throwable) {
+                        Snackbar.make(activity_main_auctions,R.string.activity_main_error,Snackbar.LENGTH_LONG).show()
+                    }
+                    override fun onComplete() {
+                    }
         })
 
     }

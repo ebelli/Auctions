@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.ebelli.auctions.R
 import com.ebelli.auctions.app.activity.AUCTION_ITEM
 import com.ebelli.auctions.app.activity.AuctionActivity
+import com.ebelli.auctions.app.addCurrency
 import com.ebelli.auctions.io.data.Item
 import com.ebelli.auctions.io.data.Items
 import kotlinx.android.synthetic.main.view_item_auction.view.*
@@ -29,7 +30,7 @@ class AuctionAdapter: RecyclerView.Adapter<ItemViewHolder>() {
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         holder.itemView.apply {
             view_item_auction_title.text = items[position].title
-            view_item_auction_amount.text = Currency.getInstance(Locale.getDefault()).symbol + (items[position].amount_cents / 100).toString()
+            view_item_auction_amount.text = (items[position].amount_cents / 100).toString().addCurrency()
             view_item_auction_container.setOnClickListener {
                 context.startActivity(
                         Intent(context,AuctionActivity::class.java).putExtra(AUCTION_ITEM, items[position]))
