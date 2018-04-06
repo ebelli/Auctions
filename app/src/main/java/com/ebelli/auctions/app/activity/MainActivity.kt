@@ -24,21 +24,25 @@ class MainActivity : AppCompatActivity() {
         val linearLayoutManager = LinearLayoutManager(this)
         linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
         activity_main_auctions.layoutManager = linearLayoutManager
-        val adapter = AuctionAdapter()
+        val adapter = AuctionAdapter(this)
+        val progessDialog = ProgressDialog(this)
         activity_main_auctions.adapter = adapter
         model.loadAuctions().
                 subscribeOn(Schedulers.io()).
                 observeOn(AndroidSchedulers.mainThread()).
                 subscribe(object: Observer<Items> {
                     override fun onSubscribe(d: Disposable) {
+                        progessDialog.show()
                     }
 
                     override fun onNext(t: Items) {
+                        progessDialog.dismiss()
                         adapter.setData(t)
                     }
 
                     override fun onError(e: Throwable) {
-                        Snackbar.make(activity_main_auctions,R.string.activity_main_error,Snackbar.LENGTH_LONG).show()
+                        progessDialog.dismiss()
+                        Snackbar.make(activity_main_auctions,R.string.activity_main_error,Snackbar.LENGTH_INDEFINITE).show()
                     }
                     override fun onComplete() {
                     }

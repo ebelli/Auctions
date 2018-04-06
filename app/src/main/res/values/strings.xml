@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Auctions</string>
     <string name="activity_main_error">Error Loading Data</string>
-    <string name="activity_auction_rate_label">Rate Band</string>
+    <string name="activity_auction_risk_label">Risk Band</string>
     <string name="activity_auction_amount_label">Amount</string>
     <string name="activity_auction_estimated_return_label">Estimated Return</string>
+    <string name="title_transition">title</string>
 </resources>
